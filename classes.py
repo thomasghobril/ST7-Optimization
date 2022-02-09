@@ -1,5 +1,5 @@
 ### Ressources
-class RessourceUnavailibility:
+class RessourceUnavailability:
   def __init__(self, latitude,longitude,unavailabilityStart,unavailabilityEnd):
     self.latitude=latitude
     self.longitude=longitude
@@ -22,7 +22,7 @@ class Ressource:
 
 
 ### Tâches
-class TaskUnavailibility:
+class TaskUnavailability:
   def __init__(self, unavailabilityStart,unavailabilityEnd):
     self.unavailabilityStart=unavailabilityStart
     self.unavailabilityEnd=unavailabilityEnd
