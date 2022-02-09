@@ -46,7 +46,7 @@ def read_tasks(v):
         if row[0].value == None:
             break
         ressources[row[0].value] = Ressource(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,row[6].value)
-        print(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,row[6].valueS)
+        print(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,row[6].value)
         return ressources
 
 def read_tasks_unavalabilities(v):
