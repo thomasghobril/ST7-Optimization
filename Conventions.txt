@@ -1,0 +1,1 @@
+Le temps est discrétisé en minutes, de 0 à 1439 compris 
