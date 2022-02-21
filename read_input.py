@@ -19,7 +19,7 @@ def time_process(string):
 def read_ressources(v):
     ressources={}
     # Define variable to load the wookbook
-    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceBordeauxV"+str(v)+".xlsx")
+    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceGuineaGolfV"+str(v)+".xlsx")
 
     # Define variable to read the active sheet:
     worksheet = wookbook.active
