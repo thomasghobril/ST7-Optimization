@@ -67,7 +67,6 @@ def read_tasks(v):
         time1=time_process(row[6].value)
         time2=time_process(row[7].value)
         tasks[row[0].value] = Task(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,time1,time2)
-        print(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,row[6].value,row[7].value)
     return tasks
 
 def read_tasks_unavailabilities(v):

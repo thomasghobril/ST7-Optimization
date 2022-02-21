@@ -29,9 +29,9 @@ class TaskUnavailability:
 
 class Task:
   def __init__(self, latitude,longitude,duration,skill,level,openingTime,closingTime):
-    self.latitude=latitude
-    self.longitude=longitude
-    self.duration=duration
+    self.latitude=float(latitude)+1
+    self.longitude=float(longitude)+1
+    self.duration=int(duration)
     self.skill=skill
     self.level=level
     self.openingTime=openingTime
