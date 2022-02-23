@@ -3,7 +3,7 @@ import openpyxl
 import datetime 
 from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
-ville="Bordeaux"
+ville="Italy"
 # "Bordeaux", "Finland", "GuineaGolf", "Italy", "Poland"
 
 def time_process(string):
