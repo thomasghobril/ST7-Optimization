@@ -1,4 +1,5 @@
 taskId;performed;employeeName;startTime;
+<<<<<<< HEAD
 T1;1;Valentin;573;
 T2;1;Valentin;674;
 T3;1;Valentin;875;
@@ -9,3 +10,15 @@ T7;1;Ambre;519;
 T8;1;Valentin;778;
 T9;1;Ambre;594;
 T10;1;Valentin;825;
+=======
+T1;1;Ambre;562;
+T2;1;Ambre;684;
+T3;1;Valentin;827;
+T4;1;Valentin;689;
+T5;1;Ambre;756;
+T6;1;Valentin;759;
+T7;1;Valentin;538;
+T8;1;Valentin;969;
+T9;1;Valentin;613;
+T10;1;Valentin;901;
+>>>>>>> a1ba6ee60f6dee2b71ee826815da965e1a2874fa
