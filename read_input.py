@@ -3,6 +3,9 @@ import openpyxl
 import datetime 
 from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
+ville="Bordeaux"
+# "Bordeaux", "Finland", "GuineaGolf", "Italy", "Poland"
+
 def time_process(string):
     time=string.split(":")
     if time[1][2]=='p':
@@ -19,7 +22,7 @@ def time_process(string):
 def read_ressources(v):
     ressources={}
     # Define variable to load the wookbook
-    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceBordeauxV"+str(v)+".xlsx")
+    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx".format(ville))
 
     # Define variable to read the active sheet:
     worksheet = wookbook.active
@@ -38,7 +41,7 @@ read_ressources(1)
 def read_ressources_unavailabilities(v):
     ressources_unavailabilities={}
     # Define variable to load the wookbook
-    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceBordeauxV"+str(v)+".xlsx")
+    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx")
 
     # Define variable to read the active sheet:
     worksheet = wookbook['Employees Unavailabilities']
@@ -55,7 +58,7 @@ def read_ressources_unavailabilities(v):
 def read_tasks(v):
     tasks={}
     # Define variable to load the wookbook
-    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceBordeauxV"+str(v)+".xlsx")
+    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx")
 
     # Define variable to read the active sheet:
     worksheet = wookbook['Tasks']
@@ -72,7 +75,7 @@ def read_tasks(v):
 def read_tasks_unavailabilities(v):
     tasks_unavailabilities={}
     # Define variable to load the wookbook
-    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/InstanceBordeauxV"+str(v)+".xlsx")
+    wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx")
 
     # Define variable to read the active sheet:
     worksheet = wookbook['Tasks Unavailabilities']
