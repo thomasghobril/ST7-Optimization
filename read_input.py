@@ -22,7 +22,7 @@ def read_ressources(v,ville):
     wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx".format(ville))
 
     # Define variable to read the active sheet:
-    worksheet = wookbook.active
+    worksheet = wookbook['Employees']
 
     # Iterate the loop to read the cell values
     for row in worksheet.iter_rows(2, max_row=15):
