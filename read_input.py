@@ -3,6 +3,8 @@ import openpyxl
 import datetime 
 from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
+INF=25
+
 def time_process(string):
     time=string.split(":")
     if time[1][2]=='p':
@@ -25,7 +27,7 @@ def read_ressources(v,ville):
     worksheet = wookbook['Employees']
 
     # Iterate the loop to read the cell values
-    for row in worksheet.iter_rows(2, max_row=15):
+    for row in worksheet.iter_rows(2, max_row=INF):
         if row[0].value == None:
             break
         time1=time_process(row[5].value)
@@ -42,7 +44,7 @@ def read_ressources_unavailabilities(v,ville):
     worksheet = wookbook['Employees Unavailabilities']
 
     # Iterate the loop to read the cell values
-    for row in worksheet.iter_rows(2, max_row=15):
+    for row in worksheet.iter_rows(2, max_row=INF):
         if row[0].value == None:
             break
         time1=time_process(row[3].value)
@@ -59,7 +61,7 @@ def read_tasks(v,ville):
     worksheet = wookbook['Tasks']
 
     # Iterate the loop to read the cell values
-    for row in worksheet.iter_rows(2, max_row=15):
+    for row in worksheet.iter_rows(2, max_row=INF):
         if row[0].value == None:
             break
         time1=time_process(row[6].value)
@@ -76,7 +78,7 @@ def read_tasks_unavailabilities(v,ville):
     worksheet = wookbook['Tasks Unavailabilities']
 
     # Iterate the loop to read the cell values
-    for row in worksheet.iter_rows(2, max_row=15):
+    for row in worksheet.iter_rows(2, max_row=INF):
         if row[0].value == None:
             break
         time1=time_process(row[1].value)
