@@ -1,0 +1,15 @@
+taskId;performed;employeeName;startTime;
+T1;1;Livia;979;
+T2;1;Oskar;619;
+T3;1;Oskar;569;
+T4;1;Oskar;524;
+T5;1;Livia;935;
+T6;1;Livia;796;
+T7;1;Sebastian;1004;
+T8;1;Livia;843;
+T9;1;Livia;889;
+T10;1;Aleksi;513;
+T11;1;Sebastian;959;
+T12;1;Sebastian;556;
+T13;1;Aleksi;629;
+T14;1;Sebastian;514;
