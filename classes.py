@@ -14,11 +14,10 @@ class Ressource:
     self.level=level
     self.workingStart=workingStart
     self.workingEnd=workingEnd
-
-  unavailibilities=[]
+    self.unavailabilities=[]
 
   def addUnavailability(self, unavailability):
-    self.unavailibilities.append(unavailability)
+    self.unavailabilities.append(unavailability)
 
 
 ### Tâches
@@ -36,9 +35,8 @@ class Task:
     self.level=level
     self.openingTime=openingTime
     self.closingTime=closingTime
-
-  unavailibilities=[]
+    self.unavailabilities=[]
 
   def addUnavailability(self, unavailability):
-    self.unavailibilities.append(unavailability)
+    self.unavailabilities.append(unavailability)
 
