@@ -3,7 +3,7 @@ import openpyxl
 import datetime 
 from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
-INF=25
+INF=100
 
 def time_process(string):
     time=string.split(":")
