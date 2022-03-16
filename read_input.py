@@ -10,6 +10,8 @@ def time_process(string):
     if time[1][2]=='p':
         time[1]=int(time[1][:2])
         time[0]=int(time[0])
+        if time[0]==12:
+            time[0]=0
         time[0]=time[0]+12
     else:
         time[1]=int(time[1][:2])
