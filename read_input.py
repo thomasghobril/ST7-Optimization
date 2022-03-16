@@ -3,7 +3,7 @@ import openpyxl
 import datetime 
 from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
-INF=25
+INF=100
 
 def time_process(string):
     time=string.split(":")
@@ -35,7 +35,7 @@ def read_ressources(v,ville):
         ressources[row[0].value] = Ressource(row[1].value,row[2].value,row[3].value,row[4].value,time1,time2)
     return ressources
 
-def read_ressources_unavailabilities(v,ville):
+def read_ressources_unavailabilities(v,ville,ressources):
     ressources_unavailabilities={}
     # Define variable to load the wookbook
     wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx")
@@ -50,6 +50,7 @@ def read_ressources_unavailabilities(v,ville):
         time1=time_process(row[3].value)
         time2=time_process(row[4].value)
         ressources_unavailabilities[row[0].value] = RessourceUnavailability(row[1].value,row[2].value,time1,time2)
+        ressources[row[0].value].addUnavailability(ressources_unavailabilities[row[0].value])
     return ressources_unavailabilities
 
 def read_tasks(v,ville):
@@ -69,7 +70,7 @@ def read_tasks(v,ville):
         tasks[row[0].value] = Task(row[1].value,row[2].value,row[3].value,row[4].value,row[5].value,time1,time2)
     return tasks
 
-def read_tasks_unavailabilities(v,ville):
+def read_tasks_unavailabilities(v,ville,tasks):
     tasks_unavailabilities={}
     # Define variable to load the wookbook
     wookbook = openpyxl.load_workbook("InstancesV"+str(v)+"/Instance"+ville+"V"+str(v)+".xlsx")
@@ -84,7 +85,10 @@ def read_tasks_unavailabilities(v,ville):
         time1=time_process(row[1].value)
         time2=time_process(row[2].value)
         tasks_unavailabilities[row[0].value] = TaskUnavailability(time1,time2)
+        tasks[row[0].value].addUnavailability(tasks_unavailabilities[row[0].value])
     return tasks_unavailabilities
 
 def read_input(v,ville):
-    return read_ressources(v,ville),read_ressources_unavailabilities(v,ville),read_tasks(v,ville),read_tasks_unavailabilities(v,ville)
+    r,t=read_ressources(v,ville),read_tasks(v,ville)
+    ru,tu=read_ressources_unavailabilities(v,ville,r),read_tasks_unavailabilities(v,ville,t)
+    return r,ru,t,tu
