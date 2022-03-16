@@ -1,11 +1,11 @@
 taskId;performed;employeeName;startTime;
 T1;1;Valentin;1020;
 T2;;;;
-T3;1;Valentin;811;
-T4;1;Valentin;645;
+T3;1;Valentin;720;
+T4;1;Valentin;760;
 T5;1;Valentin;886;
-T6;1;Valentin;575;
-T7;1;Valentin;743;
+T6;1;Valentin;830;
+T7;1;Valentin;674;
 T8;1;Valentin;558;
-T9;1;Valentin;818;
-T10;1;Valentin;626;
+T9;1;Valentin;599;
+T10;1;Valentin;649;
