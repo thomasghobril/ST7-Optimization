@@ -1,7 +1,7 @@
 # Import openyxl module
 import openpyxl
 import datetime 
-from classes import Ressource,RessourceUnavailability,Task,TaskUnavailability
+from classes2 import Ressource,RessourceUnavailability,Task,TaskUnavailability
 
 INF=100
 
