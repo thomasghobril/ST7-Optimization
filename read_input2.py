@@ -3,7 +3,7 @@ import openpyxl
 import datetime
 from classes2 import Ressource, RessourceUnavailability, Task, TaskUnavailability
 
-INF = 100
+INF = 3000
 
 
 def time_process(string):
